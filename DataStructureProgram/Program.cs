@@ -21,7 +21,7 @@ namespace DataStructureProgram
                     linkedList.Append(30);
                     linkedList.Append(70);
                     linkedList.Display();
-                    linkedList.Pop();
+                    linkedList.PopLast();
                     linkedList.Display();
                     break;
             }
