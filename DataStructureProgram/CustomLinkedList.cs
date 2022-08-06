@@ -11,10 +11,10 @@ namespace DataStructureProgram
         public Node head;
         public void Add(int data)
         {
-            Node node = new Node(data);
-            if(head == null)
+            Node newNode = new Node(data);
+            if (head == null)
             {
-                head = node;
+                head = newNode;
             }
             else
             {
@@ -23,9 +23,16 @@ namespace DataStructureProgram
                 {
                     temp = temp.next;
                 }
-                temp.next = node;
+                temp.next = newNode;
             }
-            Console.WriteLine("{0} added into linked list", node.data);
+            Console.WriteLine("{0} added into linked list", newNode.data);
+        }
+        public void AddFirst(int data)
+        {
+            Node newNode = new Node(data);
+            newNode.next = head;
+            head = newNode;
+            Console.WriteLine("{0} added into linked list", newNode.data);
         }
         public void Display()
         {
