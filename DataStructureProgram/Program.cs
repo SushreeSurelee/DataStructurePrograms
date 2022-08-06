@@ -17,12 +17,10 @@ namespace DataStructureProgram
             {
                 case 1:
                     CustomLinkedList linkedList = new CustomLinkedList();
-                    //linkedList.Add(56);
-                    //linkedList.Add(30);
-                    //linkedList.Add(70);
-                    linkedList.AddFirst(70);
-                    linkedList.AddFirst(30);
-                    linkedList.AddFirst(56);
+
+                    linkedList.Append(56);
+                    linkedList.Append(30);
+                    linkedList.Append(70);
                     linkedList.Display();
                     break;
             }

@@ -34,6 +34,11 @@ namespace DataStructureProgram
             head = newNode;
             Console.WriteLine("{0} added into linked list", newNode.data);
         }
+        public void Append(int data)
+        {
+            Add(data);
+        }
+
         public void Display()
         {
             Console.WriteLine("\nDisplaying Nodes\n");
