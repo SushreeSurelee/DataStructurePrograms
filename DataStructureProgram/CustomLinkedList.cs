@@ -104,6 +104,28 @@ namespace DataStructureProgram
                 Console.WriteLine("{0} node is removed sucessfully", lastDeletedNode);
             }
         }
+        public void Search(int data)
+        {
+            Node temp = head;
+            if (temp == null)
+            {
+                Console.WriteLine("Linked list is empty please add nodes");
+            }
+            else
+            {
+                while (temp != null)
+                {
+                    if (temp.data == data)
+                    {
+                        Console.WriteLine("\n{0} node is present in Linked list\n", temp.data);
+                        //break;
+                        return;
+                    }
+                    temp = temp.next;
+                }
+                Console.WriteLine("\n{0} node is not present in Linked list\n", data);
+            }
+        }
         public void Display()
         {
             Console.WriteLine("\nDisplaying Nodes\n");
