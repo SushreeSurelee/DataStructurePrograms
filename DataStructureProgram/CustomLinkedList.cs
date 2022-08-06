@@ -38,7 +38,6 @@ namespace DataStructureProgram
         {
             Add(data);
         }
-
         public void Display()
         {
             Console.WriteLine("\nDisplaying Nodes\n");
