@@ -18,13 +18,13 @@ namespace DataStructureProgram
                 case 1:
                     CustomLinkedList linkedList = new CustomLinkedList();
                     linkedList.Append(56);
+                    linkedList.Append(30);
                     linkedList.Append(70);
                     linkedList.Display();
-                    linkedList.Insert(30, 2);
+                    linkedList.Pop();
                     linkedList.Display();
                     break;
             }
-
             Console.ReadLine();
         }
     }

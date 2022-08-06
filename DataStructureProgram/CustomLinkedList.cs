@@ -66,6 +66,20 @@ namespace DataStructureProgram
             }
             return head;
         }
+        public void Pop()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked list is empty please add nodes");
+            }
+            else
+            {
+                int removeItem = head.data;
+                head = head.next;
+                Console.WriteLine("\n{0} is sucessfully removed from Linked list.", removeItem);
+            }
+        }
+
         public void Display()
         {
             Console.WriteLine("\nDisplaying Nodes\n");
