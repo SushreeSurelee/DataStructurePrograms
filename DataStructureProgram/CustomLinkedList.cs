@@ -38,6 +38,34 @@ namespace DataStructureProgram
         {
             Add(data);
         }
+        public Node Insert(int data, int position)
+        {
+            if(position < 1)
+                Console.WriteLine("Invalid position");
+            
+            Node newNode = new Node(data);
+            if (position==1)
+            {
+                newNode.next = head;
+                head = newNode;
+            }
+            else
+            {
+                while(position-- != 0)
+                {
+                    if (position == 1)
+                    {
+                        newNode.next = head.next;
+                        head.next = newNode;
+                        break;
+                    }
+                    head = head.next;
+                }
+                if (position != 1)
+                    Console.WriteLine("Position is out of range");
+            }
+            return head;
+        }
         public void Display()
         {
             Console.WriteLine("\nDisplaying Nodes\n");
