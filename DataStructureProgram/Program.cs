@@ -18,8 +18,9 @@ namespace DataStructureProgram
                 case 1:
                     CustomLinkedList linkedList = new CustomLinkedList();
                     linkedList.Append(56);
-                    linkedList.Append(30);
                     linkedList.Append(70);
+                    linkedList.Display();
+                    linkedList.InsertAt(30, 1);
                     linkedList.Display();
                     linkedList.Search(30);
                     linkedList.Search(80);

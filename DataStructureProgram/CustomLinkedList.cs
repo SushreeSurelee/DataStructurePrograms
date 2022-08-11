@@ -9,7 +9,7 @@ namespace DataStructureProgram
     class CustomLinkedList
     {
         public Node head;
-        public void Add(int data)
+        public void AddLast(int data)
         {
             Node newNode = new Node(data);
             if (head == null)
@@ -36,35 +36,31 @@ namespace DataStructureProgram
         }
         public void Append(int data)
         {
-            Add(data);
+            AddLast(data);
         }
-        public Node Insert(int data, int position)
+        public void InsertAt(int data, int index)
         {
-            if(position < 1)
-                Console.WriteLine("Invalid position");
             
-            Node newNode = new Node(data);
-            if (position==1)
+            if (index < 0)
             {
-                newNode.next = head;
-                head = newNode;
+                Console.WriteLine("Invalid position");
+                return;
+            }
+            if (index==0)
+            {
+                AddFirst(data);
             }
             else
             {
-                while(position-- != 0)
+                Node newNode = new Node(data);
+                Node temp = head; 
+                for (int i=0; i<index-1;i++) 
                 {
-                    if (position == 1)
-                    {
-                        newNode.next = head.next;
-                        head.next = newNode;
-                        break;
-                    }
-                    head = head.next;
+                     temp= temp.next;
                 }
-                if (position != 1)
-                    Console.WriteLine("Position is out of range");
+                newNode.next = temp.next; 
+                temp.next = newNode; 
             }
-            return head;
         }
         public void Pop()
         {
@@ -118,7 +114,6 @@ namespace DataStructureProgram
                     if (temp.data == data)
                     {
                         Console.WriteLine("\n{0} node is present in Linked list\n", temp.data);
-                        //break;
                         return;
                     }
                     temp = temp.next;
@@ -129,7 +124,7 @@ namespace DataStructureProgram
         public void Display()
         {
             Console.WriteLine("\nDisplaying Nodes\n");
-            Node temp = this.head;
+            Node temp = head;
             if (temp == null)
             {
                 Console.WriteLine("Linked List is empty.");
