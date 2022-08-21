@@ -11,7 +11,7 @@ namespace DataStructureProgram
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Data Structure Program\n");
-            Console.WriteLine("Please choose number to execute\n1:Linked List.\n2:Stack");
+            Console.WriteLine("Please choose number to execute\n1:Linked List.\n2:Stack.\n3:Queue");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -33,6 +33,18 @@ namespace DataStructureProgram
                     stack.Display();
                     stack.Empty();
                     stack.Display();
+                    break;
+                case 3:
+                    LinkedListQueue queue = new LinkedListQueue();
+                    queue.Enqueue(56);
+                    queue.Enqueue(30);
+                    queue.Enqueue(70);
+                    queue.Display();
+                    Console.WriteLine("Adding Elements using Linked list");
+                    queue.EnqueueByLinkedList(56);
+                    queue.EnqueueByLinkedList(30);
+                    queue.EnqueueByLinkedList(70);
+                    queue.DisplayByLinkedList();
                     break;
             }
             Console.ReadLine();

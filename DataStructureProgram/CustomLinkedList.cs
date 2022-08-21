@@ -25,14 +25,14 @@ namespace DataStructureProgram
                 }
                 temp.next = newNode;
             }
-            Console.WriteLine("{0} added into linked list", newNode.data);
+            Console.WriteLine("{0} added into list", newNode.data);
         }
         public void AddFirst(int data)
         {
             Node newNode = new Node(data);
             newNode.next = head;
             head = newNode;
-            Console.WriteLine("{0} added into linked list", newNode.data);
+            Console.WriteLine("{0} added into list", newNode.data);
         }
         public void Append(int data)
         {
@@ -106,7 +106,7 @@ namespace DataStructureProgram
             int count = 0;
             if (temp == null)
             {
-                Console.WriteLine("Linked list is empty please add nodes");
+                Console.WriteLine("list is empty please add nodes");
             }
             else
             {
@@ -114,7 +114,7 @@ namespace DataStructureProgram
                 {
                     if (temp.data == data)
                     {
-                        Console.WriteLine("\n{0} node is present in Linked list\n", temp.data);
+                        Console.WriteLine("\n{0} node is present in list\n", temp.data);
                         return count;
                     }
                     temp = temp.next;
@@ -126,11 +126,11 @@ namespace DataStructureProgram
         }
         public void Display()
         {
-            Console.WriteLine("\nDisplaying Nodes\n");
+            Console.WriteLine("\nDisplaying Elements\n");
             Node temp = head;
             if (temp == null)
             {
-                Console.WriteLine("Linked List is empty.");
+                Console.WriteLine("List is empty.");
                 return;
             }
             else
