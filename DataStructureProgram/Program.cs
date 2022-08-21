@@ -40,11 +40,14 @@ namespace DataStructureProgram
                     queue.Enqueue(30);
                     queue.Enqueue(70);
                     queue.Display();
-                    Console.WriteLine("Adding Elements using Linked list");
-                    queue.EnqueueByLinkedList(56);
-                    queue.EnqueueByLinkedList(30);
-                    queue.EnqueueByLinkedList(70);
-                    queue.DisplayByLinkedList();
+                    queue.Dequeue();
+                    queue.Display();
+                    //Console.WriteLine("Adding Elements using Linked list");
+                    //queue.EnqueueByLinkedList(56);
+                    //queue.EnqueueByLinkedList(30);
+                    //queue.EnqueueByLinkedList(70);
+                    //queue.DisplayByLinkedList();
+
                     break;
             }
             Console.ReadLine();

@@ -32,6 +32,18 @@ namespace DataStructureProgram
         {
             list.Append(item);
         }
+        public void Dequeue()
+        {
+            if(head == null)
+            {
+                Console.WriteLine("Elements are not present\n");
+            }
+            else
+            {
+                head = head.next;
+                Console.WriteLine("\nRemoved element at the beginning of the Queue");
+            }
+        }
         public void Display()
         {
             Console.WriteLine("\nDisplaying Elements in Queue\n");
@@ -54,5 +66,7 @@ namespace DataStructureProgram
         {
             list.Display();
         }
+
+
     }
 }
