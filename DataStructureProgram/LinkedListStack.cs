@@ -11,12 +11,15 @@ namespace DataStructureProgram
         public Node top;
         public void Push(int stackData)
         {
+            //creating a link between newnode and where top is pointing
+            //then pointing top towards the new node
+            //new node is inserted on the top
             Node newNode = new Node(stackData);
             if(this.top!=null)
             {
-                newNode.next = this.top;
+                newNode.next = this.top; //newnode with hold the address reference of top element
             }
-            this.top = newNode;
+            this.top = newNode; //top will point to new element
             Console.WriteLine("New Node {0} is added to stack", newNode.data);
         }
         public void Display()

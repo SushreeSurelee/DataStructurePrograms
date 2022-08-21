@@ -100,9 +100,10 @@ namespace DataStructureProgram
                 Console.WriteLine("{0} node is removed sucessfully", lastDeletedNode);
             }
         }
-        public void Search(int data)
+        public int Search(int data)
         {
             Node temp = head;
+            int count = 0;
             if (temp == null)
             {
                 Console.WriteLine("Linked list is empty please add nodes");
@@ -114,12 +115,14 @@ namespace DataStructureProgram
                     if (temp.data == data)
                     {
                         Console.WriteLine("\n{0} node is present in Linked list\n", temp.data);
-                        return;
+                        return count;
                     }
                     temp = temp.next;
+                    count++;
                 }
                 Console.WriteLine("\n{0} node is not present in Linked list\n", data);
             }
+            return count;
         }
         public void Display()
         {

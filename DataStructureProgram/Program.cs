@@ -21,7 +21,8 @@ namespace DataStructureProgram
                     linkedList.Append(30);
                     linkedList.Append(70);
                     linkedList.Display();
-                    linkedList.InsertAt(40, 2);
+                    int element = linkedList.Search(30);
+                    linkedList.InsertAt(40, element + 1);
                     linkedList.Display();
                     break;
                 case 2:
