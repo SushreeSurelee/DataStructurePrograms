@@ -22,10 +22,38 @@ namespace DataStructureProgram
             this.top = newNode; //top will point to new element
             Console.WriteLine("New Node {0} is added to stack", newNode.data);
         }
+        public void Peek()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("\n{0} is in top of the stack", this.top.data);
+        }
+        public void Pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            int deleteNode = this.top.data;
+            Console.WriteLine("{0} is deleted from the stack", deleteNode);
+            this.top = this.top.next;
+        }
+        public void Empty()
+        {
+            while (this.top != null)
+            {
+                Peek();
+                Pop();
+            }
+        }
         public void Display()
         {
             Console.WriteLine("\nDisplaying Nodes in Stack\n");
-            Node temp = top;
+            Node temp = this.top;
             if (temp == null)
             {
                 Console.WriteLine("Stack is empty.");
@@ -39,7 +67,6 @@ namespace DataStructureProgram
                     temp = temp.next;
                 }
             }
-            Console.WriteLine();
         }
     }
 }
