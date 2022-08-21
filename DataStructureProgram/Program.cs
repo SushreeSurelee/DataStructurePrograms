@@ -11,19 +11,25 @@ namespace DataStructureProgram
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Data Structure Program\n");
-            Console.WriteLine("Please choose number to execute\n1:Linked List.");
+            Console.WriteLine("Please choose number to execute\n1:Linked List.\n2:Stack");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
                 case 1:
                     CustomLinkedList linkedList = new CustomLinkedList();
                     linkedList.Append(56);
+                    linkedList.Append(30);
                     linkedList.Append(70);
                     linkedList.Display();
-                    linkedList.InsertAt(30, 1);
+                    linkedList.InsertAt(40, 2);
                     linkedList.Display();
-                    linkedList.Search(30);
-                    linkedList.Search(80);
+                    break;
+                case 2:
+                    LinkedListStack stack = new LinkedListStack();
+                    stack.Push(70);
+                    stack.Push(30);
+                    stack.Push(56);
+                    stack.Display();
                     break;
             }
             Console.ReadLine();
